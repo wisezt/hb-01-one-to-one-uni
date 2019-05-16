@@ -36,6 +36,14 @@ public class Instructor {
         this.email = email;
     }
 
+
+    public Instructor(String firstName, String lastName, String email, InstructorDetail instructorDetail) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.instructorDetail = instructorDetail;
+    }
+
     public int getId() {
         return id;
     }
@@ -66,5 +74,24 @@ public class Instructor {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public InstructorDetail getInstructorDetail() {
+        return instructorDetail;
+    }
+
+    public void setInstructorDetail(InstructorDetail instructorDetail) {
+        this.instructorDetail = instructorDetail;
+    }
+
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", instructorDetail=" + instructorDetail +
+                '}';
     }
 }
