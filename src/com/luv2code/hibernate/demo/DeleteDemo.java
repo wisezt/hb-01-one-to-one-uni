@@ -31,9 +31,12 @@ public class DeleteDemo {
 
             // start a transaction
             theSession.beginTransaction();
+            Instructor theInstructor =  theSession.get(Instructor.class, 2);
 
-            // save the student object
-            theSession.createQuery("delete from Instructor where id = 1").executeUpdate();
+
+
+            // delete the student object
+            theSession.delete(theInstructor);
 
             // commit transaction
             theSession.getTransaction().commit();
